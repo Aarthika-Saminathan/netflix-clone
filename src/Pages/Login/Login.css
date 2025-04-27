@@ -1,0 +1,153 @@
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Optional: adds a slight movement from below */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.login {
+  height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.6), 
+      rgba(0, 0, 0, 0.6)
+    ),
+    url('../../assets/background_banner.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.login-logo {
+  width: 150px;
+  margin-bottom: 20px;
+}
+
+.login-form {
+  background-color: rgba(0, 0, 0, 0.75);
+  padding: 40px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  animation: fadeIn 0.8s ease-out; /* Apply the fade-in animation */
+}
+
+.login-form h1 {
+  color: white;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.login-form input {
+  width: 100%;  /* Set width to 100% to match the form container's width */
+  margin-bottom: 15px;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  background-color: #333;
+  color: white;
+  font-size: 16px;
+}
+
+.login-form button {
+  padding: 12px;
+  background-color: #e50914;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 107%;  /* Ensure the button takes up the full width of the form */
+  text-align: center;
+}
+
+.login-form button:hover {
+  background-color: #f40612;
+}
+
+.form-help {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: gray;
+  font-size: 14px;
+}
+
+.need-help {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.form-switch {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.form-switch p {
+  color: white;
+}
+
+.link-text {
+  color: #e50914;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.link-text:hover {
+  text-decoration: underline;
+}
+
+.login-spinner {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-spinner img {
+  width: 60px;
+}
+
+@media (max-width: 500px) {
+  .login {
+    padding: 15px 5%;
+  }
+
+  .login-form {
+    padding: 20px;
+    margin-top: 30px;
+  }
+
+  /* Make input fields smaller on mobile */
+  .login-form input {
+    width: 80%;  /* Adjust width to 80% for mobile screens */
+    padding: 8px;  /* Decrease padding for smaller input fields */
+    font-size: 14px;  /* Decrease font size for better readability on small screens */
+    margin-bottom: 12px;  /* Slightly reduce the margin between inputs */
+  }
+
+  .login-form button {
+    width: 80%;  /* Adjust button width to match input fields */
+    padding: 10px;  /* Slightly reduce padding */
+    font-size: 16px;  /* Adjust font size */
+  }
+
+  .login-logo {
+    width: 120px;  /* Make logo smaller on mobile */
+  }
+}

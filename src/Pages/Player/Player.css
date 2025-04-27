@@ -1,0 +1,32 @@
+.player {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: #000; /* Dark background to match the video player look */
+}
+
+.player img {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 50px;
+  cursor: pointer;
+}
+
+/* Styling for the iframe (video player) */
+.player-iframe {
+  border-radius: 10px;
+  /* Adjust height as needed */
+  margin-bottom: 20px; /* Optional: Adds a little spacing between the iframe and info */
+}
+
+/* Player Info Section */
+.player-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+}
